@@ -1,0 +1,37 @@
+{
+  "name": "threejs-starter",
+  "version": "1.0.0",
+  "description": "THREE.js Starter Kit",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "budo app/index.js:build/main.js --dir ./public --live --open -- -t babelify -g glslify",
+    "build": "browserify -t babelify -t stripify -g glslify app/index.js | uglifyjs -o public/build/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:vdaguenet/threejs-starter-kit.git"
+  },
+  "author": "Valentin Daguenet <valentin.daguenet@gmail.com> (http://vdaguenet.fr)",
+  "license": "MIT",
+  "dependencies": {
+    "dat-gui": "^0.5.0",
+    "gsap": "^1.19.1",
+    "raf": "^3.3.0",
+    "three": "^0.84.0",
+    "three-orbit-controls": "^82.1.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
+    "budo": "^9.4.7",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^3.1.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "glslify": "^6.0.1",
+    "stripify": "^6.0.0",
+    "uglifyjs": "^2.4.10"
+  }
+}
