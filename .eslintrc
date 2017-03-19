@@ -29,7 +29,7 @@
     "no-console": 0,
     "padded-blocks": 0,
     "id-length": 0,
-    space-in-parens: [2, "always", { "exceptions": ["{}", "[]"] }],
+    space-in-parens: 0,
     max-len: [1, 150, 4]
   }
 }
